@@ -61,12 +61,16 @@ class kinectBodyTracker:
 				body.id = self.get_body_id(bodyIdx);
 
 				self.bodiesNow.append(body)
-
+	#f"BodyId: {body.id}"
+	#f"X: {body.skeleton.joints[_k4abt.K4ABT_JOINT_SPINE_NAVEL].position.v[0]:.2f} mm", 
+	#f"Y: {body.skeleton.joints[_k4abt.K4ABT_JOINT_SPINE_NAVEL].position.v[1]:.2f} mm", 
+	#f"Z: {body.skeleton.joints[_k4abt.K4ABT_JOINT_SPINE_NAVEL].position.v[2]:.2f} mm"
 	def printBodyPosition(self, body):
-		print(f"BodyId: {body.id}", \
-			  f"X: {body.skeleton.joints[_k4abt.K4ABT_JOINT_SPINE_NAVEL].position.v[0]:.2f} mm", \
-			  f"Y: {body.skeleton.joints[_k4abt.K4ABT_JOINT_SPINE_NAVEL].position.v[1]:.2f} mm", \
-			  f"Z: {body.skeleton.joints[_k4abt.K4ABT_JOINT_SPINE_NAVEL].position.v[2]:.2f} mm") 
+		print("BodyId: {}".format(body.id), 
+		"X: {:.2f} mm".format(body.skeleton.joints[_k4abt.K4ABT_JOINT_SPINE_NAVEL].position.v[0]),
+		"Y: {:.2f} mm".format(body.skeleton.joints[_k4abt.K4ABT_JOINT_SPINE_NAVEL].position.v[1]),
+		"Z: {:.2f} mm".format(body.skeleton.joints[_k4abt.K4ABT_JOINT_SPINE_NAVEL].position.v[2])
+			  ) 
 
 	def draw2DSkeleton(self, skeleton2D, bodyId, image):
 		color = _k4abt.body_colors

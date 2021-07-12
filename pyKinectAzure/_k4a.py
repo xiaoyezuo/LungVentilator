@@ -563,11 +563,11 @@ class k4a:
 
 		except Exception as e:
 
-			if e.winerror == 193:
-				print("Failed to load library. \n\nChange the module path to the 32 bit version.")
-				sys.exit(1)
+			#if e.winerror == 193:
+			#	print("Failed to load library. \n\nChange the module path to the 32 bit version.")
+			#	sys.exit(1)
 
-			print(e, "\n\nFailed to load Windows library. Trying to load Linux library...\n")
+			#print(e, "\n\nFailed to load Windows library. Trying to load Linux library...\n")
 
 			try:
 				_library_handle = ctypes.CDLL('k4a.so')

@@ -516,7 +516,7 @@ class pyKinectAzure:
 
 		self.k4a.k4a_transformation_destroy(transformation_handle)
 
-	def transform_depth_image_to_point_cloud(self, depth_image_handle: _k4a.k4a_image_t):
+	def transform_depth_image_to_point_cloud(self, depth_image_handle= _k4a.k4a_image_t):
 		"""Transforms the depth map to point clouds
 
 		Parameters:

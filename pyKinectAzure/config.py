@@ -39,16 +39,16 @@ class config:
 	def __str__(self):
 		"""Print the current settings and a short explanation"""
 		message = (
-			"Device configuration: \n"
-			f"\tcolor_format: {self.color_format} \n\t(0:JPG, 1:NV12, 2:YUY2, 3:BGRA32)\n\n"
-			f"\tcolor_resolution: {self.color_resolution} \n\t(0:OFF, 1:720p, 2:1080p, 3:1440p, 4:1536p, 5:2160p, 6:3072p)\n\n"
-			f"\tdepth_mode: {self.depth_mode} \n\t(0:OFF, 1:NFOV_2X2BINNED, 2:NFOV_UNBINNED,3:WFOV_2X2BINNED, 4:WFOV_UNBINNED, 5:Passive IR)\n\n"
-			f"\tcamera_fps: {self.camera_fps} \n\t(0:5 FPS, 1:15 FPS, 2:30 FPS)\n\n"
-			f"\tsynchronized_images_only: {self.synchronized_images_only} \n\t(True of False). Drop images if the color and depth are not synchronized\n\n"
-			f"\tdepth_delay_off_color_usec: {self.depth_delay_off_color_usec} ms. \n\tDelay between the color image and the depth image\n\n"
-			f"\twired_sync_mode: {self.wired_sync_mode}\n\t(0:Standalone mode, 1:Master mode, 2:Subordinate mode)\n\n"
-			f"\tsubordinate_delay_off_master_usec: {self.subordinate_delay_off_master_usec} ms.\n\tThe external synchronization timing.\n\n"
-			f"\tdisable_streaming_indicator: {self.disable_streaming_indicator} \n\t(True or False). Streaming indicator automatically turns on when the color or depth camera's are in use.\n\n"
+			"Device configuration: \n" +
+			"\tcolor_format: {} \n\t(0:JPG, 1:NV12, 2:YUY2, 3:BGRA32)\n\n".format(self.color_format) +
+			"\tcolor_resolution: {} \n\t(0:OFF, 1:720p, 2:1080p, 3:1440p, 4:1536p, 5:2160p, 6:3072p)\n\n".format(self.color_resolution) +
+			"\tdepth_mode: {} \n\t(0:OFF, 1:NFOV_2X2BINNED, 2:NFOV_UNBINNED,3:WFOV_2X2BINNED, 4:WFOV_UNBINNED, 5:Passive IR)\n\n".format(self.depth_mode) +
+			"\tcamera_fps: {} \n\t(0:5 FPS, 1:15 FPS, 2:30 FPS)\n\n".format(self.camera_fps) +
+			"\tsynchronized_images_only: {} \n\t(True of False). Drop images if the color and depth are not synchronized\n\n".format(self.synchronized_images_only) +
+			"\tdepth_delay_off_color_usec: {} ms. \n\tDelay between the color image and the depth image\n\n".format(self.depth_delay_off_color_usec) +
+			"\twired_sync_mode: {}\n\t(0:Standalone mode, 1:Master mode, 2:Subordinate mode)\n\n".format(self.wired_sync_mode) +
+			"\tsubordinate_delay_off_master_usec: {} ms.\n\tThe external synchronization timing.\n\n".format(self.subordinate_delay_off_master_usec) +
+			"\tdisable_streaming_indicator: {} \n\t(True or False). Streaming indicator automatically turns on when the color or depth camera's are in use.\n\n".format(self.disable_streaming_indicator)
 			)
 		return message
 
